@@ -18,6 +18,8 @@
         <li><%=e.name%></li>
         <li><%=e.age%></li>
         <li><%=e.city%></li>
+        <li><a href="/editData/?id=<%=e.id%>"><button>Edit</button></a></li>
+        <li><a href="/deleteData/<%=e.id%>"><button>Delete</button></a></li>
     </ul>
     <%})%>
 </body>
