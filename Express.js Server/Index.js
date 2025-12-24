@@ -1,5 +1,6 @@
-const express = require('express');
+const express = require("express");
 const port = 2208;
+const path = require("path");   
 
 
 const app = express();
@@ -20,6 +21,13 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+
+// middleware to serve static files
+const middle = (req,res,next) => {
+    console.log("This is Middleware");
+    next();
+}
 
 let data = []
 
@@ -28,7 +36,7 @@ app.get("/", (req, res) => {
 })
 
 
-app.post("/addData", (req, res) => {
+app.post("/addData", middle, (req, res) => {
    let obj = {
     id: Date.now(),
     ...req.body

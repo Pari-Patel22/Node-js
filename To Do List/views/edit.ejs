@@ -1,119 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Update Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
 
-<style>
-    body{
-        font-family: Arial, sans-serif;
-        background:#f1f5f9;
-        padding:40px;
-    }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            padding: 40px;
+        }
 
-    h1{
-        text-align:center;
-        margin-bottom:25px;
-    }
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
 
-    table{
-        width:100%;
-        max-width:1100px;
-        margin:auto;
-        border-collapse:collapse;
-        background:white;
-        border-radius:10px;
-        overflow:hidden;
-        box-shadow:0 4px 10px rgba(0,0,0,0.05);
-    }
+        table {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
 
-    thead{
-        background:#0f172a;
-        color:white;
-    }
+        thead {
+            background: #0f172a;
+            color: white;
+        }
 
-    th, td{
-        padding:12px;
-        text-align:center;
-        border-bottom:1px solid #e5e7eb;
-    }
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
 
-    input{
-        width:100%;
-        padding:8px;
-        border-radius:6px;
-        border:1px solid #cbd5e1;
-        font-size:14px;
-    }
+        input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            font-size: 14px;
+        }
 
-    input:focus{
-        outline:none;
-        border-color:#2563eb;
-    }
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
 
-    button{
-        padding:8px 16px;
-        border:none;
-        border-radius:6px;
-        cursor:pointer;
-        background:#2563eb;
-        color:white;
-    }
+        button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #2563eb;
+            color: white;
+        }
 
-    button:hover{
-        background:#1e40af;
-    }
-</style>
+        button:hover {
+            background: #1e40af;
+        }
+    </style>
 </head>
 
 <body>
 
-<h1>Update in Express</h1>
+    <h1>Update in Express</h1>
 
-<form action="/updatedata" method="post">
+    <form action="/updatedata" method="post">
 
-    <!-- ID hidden -->
-    <input type="hidden" name="id" value="<%= singledata.id %>">
+        <!-- ID hidden -->
+        <input type="hidden" name="id" value="<%= singledata.id %>">
 
-    <!-- FORM AS TABLE (SAME AS ADD PAGE) -->
-    <table>
-        <thead>
-            <tr>
-                <th>Full Name</th>
-                <th>Email</th>
-                <th>Date</th>
-                <th>Age</th>
-                <th>City</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+        <!-- FORM AS TABLE (SAME AS ADD PAGE) -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
-        <tbody>
-            <tr>
-                <td>
-                    <input type="text" name="fullName" value="<%= singledata.fullName %>" required>
-                </td>
-                <td>
-                    <input type="email" name="email" value="<%= singledata.email %>" required>
-                </td>
-                <td>
-                    <input type="date" name="joinDate" value="<%= singledata.joinDate %>" required>
-                </td>
-                <td>
-                    <input type="number" name="age" value="<%= singledata.age %>" required>
-                </td>
-                <td>
-                    <input type="text" name="city" value="<%= singledata.city %>" required>
-                </td>
-                <td>
-                    <button type="submit">Update</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" name="fullName" value="<%= singledata.fullName %>"
+                            placeholder="Enter Your FullName" required>
+                    </td>
+                    <td>
+                        <input type="email" name="email" value="<%= singledata.email %>"
+                            placeholder="Enter Your Email Id" required>
+                    </td>
+                    <td>
+                        <input type="date" name="joinDate" value="<%= singledata.joinDate %>" required>
+                    </td>
+                    <td>
+                        <input type="number" name="age" value="<%= singledata.age %>" placeholder="Enter Your Age"
+                            required>
+                    </td>
+                    <td>
+                        <input type="text" name="city" value="<%= singledata.city %>" placeholder="Enter Your City"
+                            required>
+                    </td>
+                    <td>
+                        <button type="submit">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-</form>
+    </form>
 
 </body>
+
 </html>

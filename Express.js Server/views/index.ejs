@@ -3,24 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZEE5 - Watch TV Shows, Web Series, Movie & Live TV Channels</title>
+    <!--css-->
+    <link rel="stylesheet" href="./style.css">
+    <!--css-->
+
+    <!--Media Query-->
+    <link rel="stylesheet" href="./md.css">
+    <!--Media Query-->
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="./img/favicon.jpeg" type="image/x-icon">
+    <!--favicon-->
+
+    <!--icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--icon-->
 </head>
 <body>
-    <h1>CRUD in Express </h1>
-    <form action="/addData" method="post">
-        <input type="text" name="name" placeholder="Enter Name" required>
-        <input type="text" name="age" placeholder="Enter age" required>
-        <input type="text" name="city" placeholder="Enter city" required>
-        <button type="submit">Submit</button>
-    </form>
-    <%data.map((e,i)=>{%>
-    <ul>
-        <li><%=e.name%></li>
-        <li><%=e.age%></li>
-        <li><%=e.city%></li>
-        <li><a href="/editData/?id=<%=e.id%>"><button>Edit</button></a></li>
-        <li><a href="/deleteData/<%=e.id%>"><button>Delete</button></a></li>
-    </ul>
-    <%})%>
+    <section>
+    <!--nav-->
+    <div class="nav">
+        <div class="nav-right">
+          <i class="fa-solid fa-chevron-left" style="color: #ffffff;"></i>
+            <img src="./img/logo.png" alt="">
+              <button><i class="fa-solid fa-crown" style="color: #ffffff;"></i>BUY PLAN</button>
+            <a href="https://www.zee5.com/" target="_blank" class="H">Home</a>
+            <a href="https://www.zee5.com/tv-shows">TV Shows</a>
+            <a href="https://www.zee5.com/movies">Movies</a>
+            <a href="https://www.zee5.com/premium" id="pro">Premium</a>
+            <a href="https://www.zee5.com/news" id="pro">News</a>
+            <img src="./img/app.png" class="I" alt="">  
+        </div>
+        <div class="nav-left">
+            <div class="search">
+                <img src="./img/seach.png" alt="">
+                <input type="search" placeholder="Search for Movie, Shows, Chhannels etc.">
+            </div>
+            <div class="A">
+                <img src="./img/A Language.png" alt="">
+            </div>
+            <div class="s">
+              <i class="fa-solid fa-download" style="color: #ffffff;"></i>
+            </div>
+            <div class="login">
+                <button><a href="https://www.zee5.com/signin">LOGIN</a></button>
+                <button class="L">
+                  <i class="fa-solid fa-crown" style="color: #ffffff;"></i>
+                  <a href="https://www.zee5.com/myaccount/subscription">BUY PLAN</a></button>
+            </div>
+            <div class="s">
+              <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;" id="s"></i>
+            </div>
+            <div class="menu">
+                <img src="./img/menu.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="anchor">
+      <a href="#">All</a>
+      <a href="#">Crime</a>
+      <a href="#">Thriller</a>
+      <a href="#">Comedy</a>
+      <a href="#">Romance</a>
+      <a href="#">Action</a>
+      <a href="#">Suspense</a>
+      <a href="#">Shows</a>
+      <a href="#">Movie</a>
+      <a href="#">Rent</a>
+      <a href="#">Kids</a>
+      <a href="#">Music</a>
+      <a href="#"></a>
+    </div>
+    <!--nav-->
+
+    <!--main-->
+    <div class="main">
+      <div class="img">
+        <h2>Vedaa</h2>
+        <button>Watch</button>
+      </div>
+      <div class="line-1">
+        <h2>Trending Near You</h2>
+        <div class="box">
+            <img src="./img/1.webp" alt="">
+            <img src="./img/2.webp" alt="">
+            <img src="./img/3.webp" alt="">
+            <img src="./img/4.webp" alt="">
+            <img src="./img/5.webp" alt="">
+            <img src="./img/6.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Loved by the Masses</h2>
+        <div class="box">
+            <img src="./img/7.webp" alt="">
+            <img src="./img/8.webp" alt="">
+            <img src="./img/9.webp" alt="">
+            <img src="./img/10.webp" alt="">
+            <img src="./img/11.webp" alt="">
+            <img src="./img/12.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Latest Hindi Episodes Free</h2>
+        <div class="row">
+        <div class="box-1">
+           <img src="./img/13.webp" alt="">
+           <h4>Sa Re Ga Ma Pa 2024</h4>
+           <h5>30 Nov</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/14.webp" alt="">
+           <h4>Kaise Mujhe Tum Mil Gaye</h4>
+           <h5>30 Nov</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/15.webp" alt="">
+           <h4>Bhagya Lakshmi</h4>
+           <h5>30 Nov</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/16.webp" alt="">
+           <h4>Jigriti</h4>
+           <h5>30 Nov</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/17.webp" alt="">
+           <h4>Rabb Se Hai Dua</h4>
+           <h5>30 Nov</h5>
+        </div>
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>ZEE5 Hall of Fame</h2>
+        <div class="box">
+            <img src="./img/18.webp" alt="">
+            <img src="./img/19.webp" alt="">
+            <img src="./img/20.webp" alt="">
+            <img src="./img/21.webp" alt="">
+            <img src="./img/22.webp" alt="">
+            <img src="./img/23.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Blockbuster Movies</h2>
+        <div class="box">
+            <img src="./img/24.webp" alt="">
+            <img src="./img/25.webp" alt="">
+            <img src="./img/26.webp" alt="">
+            <img src="./img/27.webp" alt="">
+            <img src="./img/28.webp" alt="">
+            <img src="./img/29.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Explore In Your Langugage</h2>
+        <div class="langugage">
+            <img src="./img/30.webp" alt="">
+            <img src="./img/31.webp" alt="">
+            <img src="./img/32.webp" alt="">
+            <img src="./img/33.webp" alt="">
+            <img src="./img/34.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Mind-Blowing Originals</h2>
+        <div class="box">
+            <img src="./img/2.webp" alt="">
+            <img src="./img/35.webp" alt="">
+            <img src="./img/36.webp" alt="">
+            <img src="./img/37.webp" alt="">
+            <img src="./img/38.webp" alt="">
+            <img src="./img/9.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Before TV Episodes | ZEE TV</h2>
+        <div class="row">
+        <div class="box-1">
+           <img src="./img/39.webp" alt="">
+           <h4>Kaise Mujhe Tum Mil Gaye</h4>
+           <h5>1 Dec</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/40.webp" alt="">
+           <h4>Rabb Se Hai Dua</h4>
+           <h5>1 Dec</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/41.webp" alt="">
+           <h4>Jigriti</h4>
+           <h5>1 Dec</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/42.webp" alt="">
+           <h4>Bhagya Lakshmi</h4>
+           <h5>1 Dec</h5>
+        </div>
+        <div class="box-1">
+           <img src="./img/43.webp" alt="">
+           <h4>Hamara Parivar</h4>
+           <h5>1 Dec</h5>
+        </div>
+        </div>
+      </div>
+      <div class="nexa">
+        <img src="./img/44.webp" alt="">
+      </div>
+      <div class="line-1">
+        <h2>Live Channels</h2>
+        <div class="box">
+            <img src="./img/45.webp" alt="">
+            <img src="./img/46.webp" alt="">
+            <img src="./img/47.webp" alt="">
+            <img src="./img/48.webp" alt="">
+            <img src="./img/49.webp" alt="">
+            <img src="./img/50.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Live Breaking News</h2>
+        <div class="box-2">
+            <img src="./img/51.webp" alt="">
+            <img src="./img/52.webp" alt="">
+            <img src="./img/53.webp" alt="">
+            <img src="./img/54.webp" alt="">
+            <img src="./img/55.webp" alt="">
+            <img src="./img/56.webp" alt="">
+            <img src="./img/57.webp" alt="">
+            <img src="./img/58.webp" alt="">
+            <img src="./img/59.webp" alt="">
+            <img src="./img/60.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Korean Shows in Hindi for FREE</h2>
+        <div class="box">
+            <img src="./img/61.webp" alt="">
+            <img src="./img/62.webp" alt="">
+            <img src="./img/63.webp" alt="">
+            <img src="./img/64.webp" alt="">
+            <img src="./img/65.webp" alt="">
+            <img src="./img/66.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>IIFA 2024 | All The Action</h2>
+        <div class="langugage">
+            <img src="./img/67.webp" alt="">
+            <img src="./img/68.webp" alt="">
+            <img src="./img/69.webp" alt="">
+            <img src="./img/70.webp" alt="">
+            <img src="./img/71.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Korean Shows in Hindi for FREE</h2>
+        <div class="box">
+            <img src="./img/72.webp" alt="">
+            <img src="./img/73.webp" alt="">
+            <img src="./img/74.webp" alt="">
+            <img src="./img/75.webp" alt="">
+            <img src="./img/76.webp" alt="">
+            <img src="./img/77.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Devotional Live TV | Free</h2>
+        <div class="box-2">
+            <img src="./img/78.webp" alt="">
+            <img src="./img/79.webp" alt="">
+            <img src="./img/80.webp" alt="">
+            <img src="./img/81.webp" alt="">
+            <img src="./img/82.webp" alt="">
+            <img src="./img/83.webp" alt="">
+            <img src="./img/84.webp" alt="">
+            <img src="./img/85.webp" alt="">
+            <img src="./img/86.webp" alt="">
+            <img src="./img/82.webp" alt="">
+        </div>
+      </div>
+      <div class="line-1">
+        <h2>Learn with Eduauraa</h2>
+        <div class="box">
+            <img src="./img/87.webp" alt="">
+            <img src="./img/88.webp" alt="">
+            <img src="./img/89.webp" alt="">
+            <img src="./img/90.webp" alt="">
+            <img src="./img/91.webp" alt="">
+            <img src="./img/92.webp" alt="">
+        </div>
+      </div> 
+    </div>
+    <!--main-->
+
+    <hr>
+
+    <!--footer-->
+    <footer>
+      <div class="first">
+        <div class="D">
+          <h3>Download Apps</h3>
+          <img src="./img/google play.png" alt="">
+          <img src="./img/app store.png" alt="">
+        </div>
+        <div class="icon">
+          <h3>Connect with us</h3>
+          <div class="C">
+            <img src="./img/facebook.png" alt="">
+          </div>
+          <div class="C" id="I">
+            <img src="./img/instagram.png" alt="">
+          </div>
+          <div class="C" id="II">
+            <img src="./img/twitter.png" alt="">
+          </div>
+          <div class="C" id="III">
+            <img src="./img/youtabe.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <h5>Channels &nbsp; &nbsp; &nbsp;|</h5>
+        <h5>About us &nbsp; &nbsp; &nbsp; |</h5>
+        <h5>Help Center &nbsp; &nbsp; &nbsp; |</h5>
+        <h5>Privacy Policy &nbsp; &nbsp; &nbsp; |</h5>
+        <h5>Terms of Use &nbsp; &nbsp; &nbsp; |</h5>
+        <h5>Preferces &nbsp; &nbsp; &nbsp; |</h5>
+        <h5>Do not Sell or Share my Personal Information</h5>
+      </div>
+      <div class="third">
+        <div class="one">
+          <h3>Popular TV Shows</h3>
+          <h5>Mahabharat</h5>
+          <h5>Kahan ho Tum</h5>
+          <h5>Jhansi ki Rani</h5>
+          <h5>Kumkum Bhagya</h5>
+          <h5>Kundali Bhagya</h5>
+          <h5>Bhagya Lakshmi</h5>
+          <h5>Meet</h5>
+          <h5>Annapooma</h5>
+          <h5>Indira</h5>
+          <h5>Korean Drama</h5>
+          <h5>Pakistani Serials</h5>
+        </div>
+        <div class="one">
+          <h3>Premium Movies</h3>
+          <h5>Berlin</h5>
+          <h5>Bhaiyya Ji</h5>
+          <h5>Vedaa</h5>
+          <h5>Dharmaveer 2</h5>
+          <h5>Swatantrya Veer Savarkar</h5>
+          <h5>Bastar</h5>
+          <h5>Despatch</h5>
+          <h5>The Kerala Story</h5>
+          <h5>Silence 2</h5>
+          <h5>Sam Bahadur</h5>
+          <h5>Kadak Singh</h5>
+          <h5>Gadar 2</h5>
+          <h5>Hanu-Man</h5>
+          <h5>Bandaa</h5>
+          <h5>RRR</h5>
+          <h5>Uri: The Surgical Strike</h5>
+        </div>
+        <div class="one">
+          <h3>Popular LIVE TV Channels</h3>
+        <h5>Zee News</h5>
+        <h5>Zee TV HD</h5>
+        <h5>&TV HD</h5>
+        <h5>Zee Marathi HD</h5>
+        </div>
+        <div class="one">
+          <h3>Popular Web Series</h3>
+        <h5>Murshid</h5>
+        <h5>Gyaarah Gyaarah</h5>
+        <h5>Manorathangal</h5>
+        <h5>Paithani</h5>
+        <h5>Paruvu</h5>
+        <h5>Thalaimai Seyalagam</h5>
+        <h5>The Broken News</h5>
+        <h5>Divorce Ke Liye Kuch Bhi Ka</h5>
+        <h5>Black Widows</h5>
+        <h5>Duranga 2</h5>
+        <h5>Mithya</h5>
+        <h5>Taj</h5>
+        <h5>Sunflower</h5>
+        <h5>Tripling</h5>
+        <h5>Pitchers</h5>
+        </div>
+        <div class="one">
+          <h3>Bollywood Top Celebrities</h3>
+        <h5>Sunny Leone</h5>
+        <h5>Disha Patani</h5>
+        <h5>Deepika Padukone</h5>
+        <h5>Salman Khan</h5>
+        <h5>Manoj Bajpayee</h5>
+        <h5>Pankaj Tripathi</h5>
+        <h5>Vicky Kaushal</h5>
+        <h5>Sunny Deol</h5>
+        <h5>Ameesha Patel</h5>
+        <h5>Abhishek Bachchan</h5>
+        <h5>Amitabh Bachchan</h5>
+        <h5>Kangana Ranaut</h5>        
+        </div>
+        <div class="one">
+          <h3>Games & News</h3>
+        <h5>Blog</h5>
+        <h5>Web Stories</h5>
+        <h5>ILT20 2025</h5>
+        <h5>ILT20 Schedule</h5>
+        <h5>Abu Dhabi Knight Riders</h5>
+        <h5>Desert Vipers</h5>
+        <h5>Dubai Capitals</h5>
+        <h5>Gulf Giants</h5>
+        <h5>Mi Emirates</h5>      
+        </div>
+      </div>
+      <div class="four">
+        <h6>Best viewed on Google Chrome 80+, Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+ <br>
+           Copyright © 2024 Zee Entertainment Enterprises Ltd. All rights reserved.</h6>
+      </div>
+    </footer>
+    <!--footer-->
+    </section>
 </body>
 </html>

@@ -1,0 +1,203 @@
+@media (max-width:576px){
+    .nav{
+        padding: 0 8px;
+        height: 45px;
+    }
+    .nav-right i{
+        display: flex;
+    }
+    .nav-right a{
+        display: none;
+    }
+    .nav-right button{
+        display: flex;
+    }
+    .I{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .menu{
+        margin: 0 5px 0 0;
+    }
+    .A{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .s i{
+        display: flex;
+        margin: 0 5px 0 0;
+    }
+    #L{
+        display: flex;
+        width: 40%;
+    }
+    .anchor{
+        display: flex;
+    }
+    .img{
+        height: 200px;
+    }
+    .main{
+        padding: 0;
+        overflow: hidden;
+    }
+    .line-1{
+        width: 950px;
+        padding: 0 0 0 30px;
+    }
+    .line-1 h2{
+        font-size: 18px;
+    }
+    .box-1 h4{
+        font-size: 13px;
+    }
+    .box-1 h5{
+        font-size: 13px;
+    }
+    .nexa{
+        padding: 0 50px;
+    }
+    .nexa img{
+        height: 100px;
+    }
+    .box-2 img{
+
+        margin: 0 5px;
+    }
+    hr{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+@media (min-width:577px) and (max-width:900px){
+    .nav{
+        padding: 0 8px;
+        height: 45px;
+    }
+    .nav-right a{
+        display: none;
+    }
+    .nav-right button{
+        display: flex;
+    }
+    .I{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .menu{
+        margin: 0 5px 0 0;
+    }
+    .A{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+    .s i{
+        display: flex;
+        margin: 0 5px 0 0;
+    }
+    #L{
+        display: flex;
+        width: 40%;
+    }
+    .anchor{
+        display: flex;
+    }
+    .anchor a{
+        margin: 0 17px;
+    }
+    .img{
+        height: 350px;
+    }
+    .main{
+        padding: 0;
+        overflow: hidden;
+    }
+    .line-1{
+        width: 950px;
+        padding: 0 0 0 30px;
+    }
+    .line-1 h2{
+        font-size: 18px;
+    }
+    .box-1 h4{
+        font-size: 13px;
+    }
+    .box-1 h5{
+        font-size: 13px;
+    }
+    .nexa{
+        padding: 0 50px;
+    }
+    .nexa img{
+        height: 200px;
+    }
+    .box-2 img{
+        margin: 0 5px;
+    }
+    hr{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+@media (min-width:900px) and (max-width:1200px){
+    #pro{
+        display: none;
+    }
+    .nav-left{
+        width: 80%;
+    }
+    .s i{
+        display: flex;
+        margin: 0 0px 0 10px;
+    }
+    .login{
+        display: none;
+    }
+    .menu{
+        margin: 0 0 0 10px;
+    }
+    .main{
+        overflow: hidden;
+    }
+    .box-2 img{
+        margin: 0 5px;
+    }
+    .D{
+        width: 42%;
+    }
+    .icon{
+        width: 35%;
+    }
+    .second h5{
+        margin: 0 20px 0 0;
+    }
+    .one{
+        margin: 0 15px 0 0;
+    }
+}
+@media(min-width:1201px) and (max-width:1368px){
+    .nav-left{
+        width: 80%;
+    }
+    #pro{
+        display: none;
+    }
+    .main{
+        overflow: hidden;
+    }
+    .box-2 img{
+        margin: 0 15px 0 0;
+    }
+}
