@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            background:linear-gradient(135deg,#667eea,#764ba2);
+            padding:40px;
+        }
+
+        h1{
+            text-align:center;
+            color:#fff;
+            margin-bottom:30px;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+            background:#fff;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        form{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:15px;
+            margin-bottom:30px;
+        }
+
+        form input{
+            padding:12px 15px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            font-size:14px;
+            outline:none;
+        }
+
+        form input:focus{
+            border-color:#667eea;
+            box-shadow:0 0 0 2px rgba(102,126,234,0.2);
+        }
+
+        form button{
+            grid-column:span 3;
+            padding:12px;
+            border:none;
+            border-radius:8px;
+            background:linear-gradient(135deg,#667eea,#764ba2);
+            color:#fff;
+            font-size:16px;
+            font-weight:500;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        form button:hover{
+            transform:translateY(-2px);
+            box-shadow:0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        thead{
+            background:#667eea;
+            color:#fff;
+        }
+
+        th,td{
+            padding:12px;
+            text-align:center;
+        }
+
+        tbody tr:nth-child(even){
+            background:#f4f6ff;
+        }
+
+        tbody tr:hover{
+            background:#eef1ff;
+        }
+
+        td a button{
+            padding:6px 12px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-size:13px;
+        }
+
+        .edit-btn{
+            background:#38bdf8;
+            color:#fff;
+        }
+
+        .delete-btn{
+            background:#ef4444;
+            color:#fff;
+        }
+
+        .edit-btn:hover,
+        .delete-btn:hover{
+            opacity:0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mongodb in Express</h1>
+
+    <div class="container">
+
+        <form action="/adddata" method="post">
+            <input type="text" name="name" placeholder="Enter Your Name">
+            <input type="number" name="age" placeholder="Enter Your Age">
+            <input type="text" name="city" placeholder="Enter Your City">
+
+            <button type="submit">Add Data</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% data.map((e)=>{ %>
+                <tr>
+                    <td><%= e.id %></td>
+                    <td><%= e.name %></td>
+                    <td><%= e.age %></td>
+                    <td><%= e.city %></td>
+                    <td>
+                        <a href="/editdata?id=<%=e.id%>">
+                            <button class="edit-btn">Edit</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/deleteData?id=<%=e.id%>">
+                            <button class="delete-btn">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>

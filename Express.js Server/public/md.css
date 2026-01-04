@@ -30,6 +30,7 @@
     .s i{
         display: flex;
         margin: 0 5px 0 0;
+        padding : 0;
     }
     #L{
         display: flex;

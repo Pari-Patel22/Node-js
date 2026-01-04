@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mongodb in Express</h1>
+    <form action="/adddata" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Enter Your Name">
+        <input type="number" name="age" placeholder="Enter Your Age">
+        <input type="text" name="city" placeholder="Enter Your City">
+        <input type="file" name="image" >
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+
+     <table border="1" width="100%" >
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <% data.map((e)=>{ %>
+                <tr>
+                    
+                    <td>
+                        <%= e.id %>
+                    </td>
+                    <td>
+                        <%= e.name %>
+                    </td>
+                    <td>
+                        <%= e.age %>
+                    </td>
+                    <td>
+                        <%= e.city %>
+                    </td>
+                    <td><img width="10%" src="<%=e.image%>" alt="image"></td>
+                    <td><a href="/editdata?id=<%=e.id%>"><button>Edit</button></a></td>
+                    <td><a href="/deleteData?id=<%=e.id%>"><button>Delete</button></a></td>
+                    
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+</body>
+</html>

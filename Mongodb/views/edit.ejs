@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mongodb in Express</h1>
+    <form action="/updatedata" method="post" enctype="multipart/form-data">
+        <input type="text" name="id" hidden value="<%= singledata.id %>">
+        <input type="text" name="name" placeholder="Enter Your Name" value="<%= singledata.name %>">
+        <input type="number" name="age" placeholder="Enter Your Age" value="<%= singledata.age %>">
+        <input type="text" name="city" placeholder="Enter Your City" value="<%= singledata.city %>">
+
+        <input type="file" name="image" >
+        <img src="<%=singledata.image%>" width="10%" alt="">
+
+        <button type="submit">Update</button>
+    </form>
+
+
+
+    
+
+</body>
+</html>
