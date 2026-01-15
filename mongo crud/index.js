@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 2226;
+const port = 2622;
 
 const app = express();
 const db = require("./config/db");
